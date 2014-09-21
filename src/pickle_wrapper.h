@@ -7,9 +7,7 @@
 
 #include <string>
 
-#include "native_mate/handle.h"
-#include "native_mate/wrappable.h"
-#include "src/pickle.h"
+#include "src/pickle_iterator_wrapper.h"
 
 class PickleWrapper : public mate::Wrappable,
                       public Pickle {
@@ -25,6 +23,10 @@ class PickleWrapper : public mate::Wrappable,
 
   // Returns a Buffer that contains data().
   v8::Handle<v8::Value> GetData(v8::Isolate* isolate) const;
+
+  // Returns an iterator.
+  mate::Handle<PickleIteratorWrapper> CreateIterator(
+      v8::Isolate* isolate) const;
 
   // mate::Wrappable:
   virtual mate::ObjectTemplateBuilder GetObjectTemplateBuilder(

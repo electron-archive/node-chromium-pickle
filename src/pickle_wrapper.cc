@@ -43,6 +43,11 @@ v8::Handle<v8::Value> PickleWrapper::GetData(v8::Isolate* isolate) const {
 #endif
 }
 
+mate::Handle<PickleIteratorWrapper> PickleWrapper::CreateIterator(
+    v8::Isolate* isolate) const {
+  return PickleIteratorWrapper::Create(isolate, *this);
+}
+
 mate::ObjectTemplateBuilder PickleWrapper::GetObjectTemplateBuilder(
     v8::Isolate* isolate) {
   return mate::ObjectTemplateBuilder(isolate)
@@ -54,6 +59,7 @@ mate::ObjectTemplateBuilder PickleWrapper::GetObjectTemplateBuilder(
       .SetMethod("writeFloat", &PickleWrapper::WriteFloat)
       .SetMethod("writeDouble", &PickleWrapper::WriteDouble)
       .SetMethod("writeString", &PickleWrapper::WriteString)
+      .SetMethod("createIterator", &PickleWrapper::CreateIterator)
       .SetMethod("toBuffer", &PickleWrapper::GetData);
 }
 
