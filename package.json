@@ -1,0 +1,23 @@
+{
+  "main": "./lib/main.js",
+  "name": "chromium-pickle",
+  "description": "Binary value packing and unpacking",
+  "version": "0.1.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/atom/node-chromium-pickle/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/node-chromium-pickle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/node-chromium-pickle/issues"
+  },
+  "dependencies": {
+    "bindings": "1.1.0",
+    "native-mate": "0.2.4"
+  }
+}
