@@ -5,6 +5,8 @@
 #ifndef SRC_PICKLE_WRAPPER_H_
 #define SRC_PICKLE_WRAPPER_H_
 
+#include <string>
+
 #include "native_mate/handle.h"
 #include "native_mate/wrappable.h"
 #include "src/pickle.h"
@@ -17,6 +19,9 @@ class PickleWrapper : public mate::Wrappable,
  protected:
   PickleWrapper();
   virtual ~PickleWrapper();
+
+  // Returns a Buffer that contains data().
+  v8::Handle<v8::Value> GetData(v8::Isolate* isolate) const;
 
   // mate::Wrappable:
   virtual mate::ObjectTemplateBuilder GetObjectTemplateBuilder(
