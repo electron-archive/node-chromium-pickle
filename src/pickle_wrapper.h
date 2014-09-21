@@ -15,9 +15,12 @@ class PickleWrapper : public mate::Wrappable,
                       public Pickle {
  public:
   static mate::Handle<PickleWrapper> Create(v8::Isolate* isolate);
+  static mate::Handle<PickleWrapper> CreateFrom(
+      v8::Isolate* isolate, const char* data, int data_len);
 
  protected:
   PickleWrapper();
+  PickleWrapper(const char* data, int data_len);
   virtual ~PickleWrapper();
 
   // Returns a Buffer that contains data().

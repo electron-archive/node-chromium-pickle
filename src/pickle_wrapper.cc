@@ -26,6 +26,10 @@ struct Converter<Pickle*> {
 PickleWrapper::PickleWrapper() {
 }
 
+PickleWrapper::PickleWrapper(const char* data, int data_len)
+    : Pickle(data, data_len) {
+}
+
 PickleWrapper::~PickleWrapper() {
 }
 
@@ -56,4 +60,10 @@ mate::ObjectTemplateBuilder PickleWrapper::GetObjectTemplateBuilder(
 // static
 mate::Handle<PickleWrapper> PickleWrapper::Create(v8::Isolate* isolate) {
   return CreateHandle(isolate, new PickleWrapper);
+}
+
+// static
+mate::Handle<PickleWrapper> PickleWrapper::CreateFrom(
+    v8::Isolate* isolate, const char* data, int data_len) {
+  return CreateHandle(isolate, new PickleWrapper(data, data_len));
 }
