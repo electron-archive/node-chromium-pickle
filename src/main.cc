@@ -14,7 +14,7 @@ v8::Handle<v8::Value> CreatePickleFromBuffer(
     mate::Arguments* args, v8::Handle<v8::Object> buffer) {
   if (!node::Buffer::HasInstance(buffer)) {
     args->ThrowTypeError("Can only create from Buffer");
-    MATE_METHOD_RETURN_UNDEFINED();
+    return MATE_UNDEFINED(args->isolate());
   }
 
   return PickleWrapper::CreateFrom(

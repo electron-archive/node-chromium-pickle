@@ -13,7 +13,7 @@ namespace {
 
 v8::Handle<v8::Value> ThrowError(mate::Arguments* args) {
   args->ThrowTypeError("Data can not be extracted");
-  MATE_METHOD_RETURN_UNDEFINED();
+  return MATE_UNDEFINED(args->isolate());
 }
 
 }  // namespace
