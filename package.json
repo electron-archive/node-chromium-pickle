@@ -2,7 +2,7 @@
   "main": "./lib/main.js",
   "name": "chromium-pickle",
   "description": "Binary value packing and unpacking",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "licenses": [
     {
       "type": "MIT",
