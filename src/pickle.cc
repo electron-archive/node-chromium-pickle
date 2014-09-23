@@ -5,6 +5,7 @@
 #include "src/pickle.h"
 
 #include <stdlib.h>
+#include <stdint.h>
 
 #include <algorithm>  // for max()
 
