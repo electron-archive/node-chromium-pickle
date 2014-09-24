@@ -97,5 +97,5 @@ mate::ObjectTemplateBuilder PickleIteratorWrapper::GetObjectTemplateBuilder(
 // static
 mate::Handle<PickleIteratorWrapper> PickleIteratorWrapper::Create(
     v8::Isolate* isolate, const Pickle& pickle) {
-  return CreateHandle(isolate, new PickleIteratorWrapper(pickle));
+  return mate::CreateHandle(isolate, new PickleIteratorWrapper(pickle));
 }

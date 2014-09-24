@@ -13,6 +13,22 @@
       ],
       "include_dirs": [ "." ],
       "dependencies": [ "<!(node -e \"require('native-mate')\")" ],
+      "conditions": [
+        ['OS=="win"', {
+          'msvs_settings': {
+            'VCLinkerTool': {
+              'AdditionalOptions': [
+                '/FORCE:MULTIPLE'
+              ]
+            },
+            'VCCLCompilerTool': {
+              'AdditionalOptions': [
+                '/EHsc'
+              ]
+            }
+          }
+        }],
+      ],
     }
   ]
 }

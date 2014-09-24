@@ -65,11 +65,11 @@ mate::ObjectTemplateBuilder PickleWrapper::GetObjectTemplateBuilder(
 
 // static
 mate::Handle<PickleWrapper> PickleWrapper::Create(v8::Isolate* isolate) {
-  return CreateHandle(isolate, new PickleWrapper);
+  return mate::CreateHandle(isolate, new PickleWrapper);
 }
 
 // static
 mate::Handle<PickleWrapper> PickleWrapper::CreateFrom(
     v8::Isolate* isolate, const char* data, int data_len) {
-  return CreateHandle(isolate, new PickleWrapper(data, data_len));
+  return mate::CreateHandle(isolate, new PickleWrapper(data, data_len));
 }
