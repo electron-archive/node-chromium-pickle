@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "bindings": "1.1.0",
-    "native-mate": "0.2.4"
+    "native-mate": "0.2.5"
   }
 }
