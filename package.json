@@ -6,15 +6,15 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/atom/node-chromium-pickle/raw/master/LICENSE"
+      "url": "http://github.com/electron/node-chromium-pickle/raw/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/node-chromium-pickle.git"
+    "url": "https://github.com/electron/node-chromium-pickle.git"
   },
   "bugs": {
-    "url": "https://github.com/atom/node-chromium-pickle/issues"
+    "url": "https://github.com/electron/node-chromium-pickle/issues"
   },
   "dependencies": {
     "bindings": "1.1.0",
